@@ -10,6 +10,7 @@ from typing import List, Dict, Any
 
 INVENTORY_FILE = 'inventory.json'
 
+
 def load_inventory() -> List[Dict[str, Any]]:
     """Carga el inventario desde el archivo JSON.
 
@@ -34,6 +35,7 @@ def load_inventory() -> List[Dict[str, Any]]:
     except Exception:
         # Cualquier otro error (permisos, etc.) también devolvemos lista vacía
         return []
+
 
 def save_inventory(items: List[Dict[str, Any]]) -> None:
     """Guarda el inventario en el archivo JSON con indentación.

@@ -3,9 +3,6 @@
 import pytest
 from stockguard.models import Item
 
-# ----------------------------------------------------------------------
-# Tests de creación válida
-# ----------------------------------------------------------------------
 
 def test_item_creation_valid():
     """Test: crear un Item con valores válidos debe funcionar."""
@@ -14,11 +11,13 @@ def test_item_creation_valid():
     assert item.qty == 10
     assert item.price == 999.99
 
+
 def test_item_creation_minimal_positive():
     """Edge case: valores muy pequeños pero positivos deben ser aceptados."""
     item = Item(name="Clavo", qty=1, price=0.01)
     assert item.qty == 1
     assert item.price == 0.01
+
 
 def test_item_creation_large_qty():
     """Edge case: cantidad muy grande (ej. 10^6) debe ser aceptada."""
@@ -26,42 +25,36 @@ def test_item_creation_large_qty():
     item = Item(name="Tornillo", qty=large_qty, price=0.05)
     assert item.qty == large_qty
 
-# ----------------------------------------------------------------------
-# Tests de validación de cantidad (qty <= 0 debe lanzar ValueError)
-# ----------------------------------------------------------------------
 
 def test_item_qty_zero_raises_value_error():
     """qty=0 debe lanzar ValueError."""
     with pytest.raises(ValueError, match="La cantidad debe ser positiva"):
         Item(name="Ratón", qty=0, price=15.0)
 
+
 def test_item_qty_negative_raises_value_error():
     """qty negativo debe lanzar ValueError."""
     with pytest.raises(ValueError, match="La cantidad debe ser positiva"):
         Item(name="Teclado", qty=-5, price=25.0)
 
-# ----------------------------------------------------------------------
-# Tests de validación de precio (price <= 0 debe lanzar ValueError)
-# ----------------------------------------------------------------------
 
 def test_item_price_zero_raises_value_error():
     """price=0 debe lanzar ValueError."""
     with pytest.raises(ValueError, match="El precio debe ser positivo"):
         Item(name="Monitor", qty=2, price=0.0)
 
+
 def test_item_price_negative_raises_value_error():
     """price negativo debe lanzar ValueError."""
     with pytest.raises(ValueError, match="El precio debe ser positivo"):
         Item(name="Tablet", qty=3, price=-10.5)
 
-# ----------------------------------------------------------------------
-# Edge cases adicionales (propios)
-# ----------------------------------------------------------------------
 
 def test_item_price_very_small_positive():
     """Edge case: precio positivo muy pequeño (0.0001) debe ser válido."""
     item = Item(name="Microchip", qty=100, price=0.0001)
     assert item.price > 0
+
 
 def test_item_qty_max_int():
     """Edge case: cantidad igual al máximo entero (2**31-1) debe ser válida."""

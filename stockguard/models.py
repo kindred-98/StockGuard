@@ -36,7 +36,6 @@ class Item:
         if self.price <= 0:
             raise ValueError(f"El precio debe ser positivo, recibido: {self.price}")
 
-    # Opcional: método para convertir a diccionario (compatible con storage)
     def to_dict(self) -> dict[str, Any]:
         """Convierte el Item a diccionario para guardar en JSON.
 

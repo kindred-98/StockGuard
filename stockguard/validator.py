@@ -3,6 +3,7 @@
 Proporciona funciones para validar cantidad y precio de ítems.
 """
 
+
 def validate_qty(qty: int) -> bool:
     """Valida que la cantidad sea un entero positivo.
 
