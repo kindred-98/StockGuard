@@ -84,27 +84,30 @@ bandit -r stockguard/
 ## Estructura del Proyecto
 
 ```
-stockguard/
+StockGuard/
+├── .github/workflows/
+│   ├── ci.yml
+│   └── security.yml
 ├── stockguard/
 │   ├── __init__.py
 │   ├── stockguard.py    # Código original (con validaciones)
 │   ├── models.py        # Dataclass Item
 │   ├── validator.py     # Validaciones de entrada
-│   └── storage.py      # Persistencia JSON
+│   └── storage.py       # Persistencia JSON
 ├── tests/
 │   ├── __init__.py
 │   ├── test_models.py
 │   ├── test_validator.py
 │   ├── test_storage.py
 │   └── test_stockguard.py
-├── .github/
-│   └── workflows/
-│       ├── ci.yml
-│       └── security.yml
+├── docs/
+│   ├── AUDIT.md
+│   ├── DOCUMENTACION_PROYECTO.md
+│   └── Resolucion_del_Bloque8.md
 ├── .pre-commit-config.yaml
 ├── requirements.txt
 ├── README.md
-└── AUDIT.md
+└── .gitignore
 ```
 
 ## Uso de IA
