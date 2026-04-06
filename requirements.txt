@@ -1,3 +1,5 @@
 pytest>=8
 pytest-mock>=3
+pytest-cov>=4
 flake8>=7
+bandit>=1.7
