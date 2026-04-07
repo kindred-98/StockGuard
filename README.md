@@ -3,6 +3,7 @@
 [![StockGuard CI](https://github.com/kindred-98/StockGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/kindred-98/StockGuard/actions/workflows/ci.yml)
 [![Security Audit](https://github.com/kindred-98/StockGuard/actions/workflows/security.yml/badge.svg)](https://github.com/kindred-98/StockGuard/actions/workflows/security.yml)
 [![Coverage](https://codecov.io/github/kindred-98/StockGuard/coverage.svg?branch=main)](https://codecov.io/github/kindred-98/StockGuard)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=kindred-98_StockGuard&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kindred-98_StockGuard)
 
 ## Descripción
 
@@ -103,9 +104,11 @@ StockGuard/
 ├── docs/
 │   ├── AUDIT.md
 │   ├── DOCUMENTACION_PROYECTO.md
-│   └── Resolucion_del_Bloque8.md
+│   ├── Resolucion_del_Bloque8.md
+│   └── PIPELINES_EXPLICACION.md
 ├── .pre-commit-config.yaml
 ├── requirements.txt
+├── sonar-project.properties
 ├── README.md
 └── .gitignore
 ```
