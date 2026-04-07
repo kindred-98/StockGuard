@@ -62,3 +62,4 @@ Otro momento fue al corregir la estructura anidada de carpetas. La IA me habría
 En resumen, **no uso IA cuando quiero consolidar un concepto fundamental** o cuando el ejercicio valora específicamente mi capacidad de análisis y creatividad. La IA es una herramienta, no un sustituto del pensamiento crítico..
 
 ---
+
