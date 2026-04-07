@@ -69,3 +69,8 @@ El proyecto no contiene ningún test (unitario, de integración, etc.) ni docume
 ## Conclusión
 Las tres vulnerabilidades son críticas y deben corregirse en el orden propuesto. 
 La corrección completa se realizará en las siguientes fases del ejercicio, respetando el plan de 12 commits que mando Rusgar.
+
+
+![alt text](<Captura de pantalla 2026-04-07 135546.png>)
+![alt text](<Captura de pantalla 2026-04-07 135601.png>)
+![alt text](<Captura de pantalla 2026-04-07 141227.png>)
