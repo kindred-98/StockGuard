@@ -31,3 +31,10 @@ jobs:
     - name: Run tests with pytest
       run: |
         pytest tests/ -v --tb=short --cov=stockguard --cov-report=xml
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      with:
+        projectBaseDir: .
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
