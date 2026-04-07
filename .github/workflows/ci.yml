@@ -37,7 +37,5 @@ jobs:
       with:
         args: >
           -Dsonar.python.coverage.reportPaths=coverage.xml
-          -Dsonar.sources=stockguard
-          -Dsonar.tests=tests
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
