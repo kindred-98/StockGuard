@@ -1,3 +1,5 @@
+<div align="center">
+
 # StockGuard
 
 ### Sistema de Gestión de Inventarios - Python 3.12+
@@ -8,6 +10,8 @@
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=kindred-98_StockGuard&metric=alert_status)](https://sonarcloud.io/dashboard?id=kindred-98_StockGuard)
 [![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+</div>
 
 ---
 
