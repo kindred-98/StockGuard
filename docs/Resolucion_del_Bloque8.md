@@ -59,6 +59,6 @@ Durante el ejercicio, decidí **no usar la IA para diseñar los casos borde (edg
 
 Otro momento fue al corregir la estructura anidada de carpetas. La IA me habría dado el comando `Move-Item` probablemente, pero preferí entender por qué ocurría el error y resolverlo manualmente mirando el `tree /F`. Eso me ayudó a comprender cómo Python interpreta los paquetes y la importancia de `__init__.py`. Usar IA habría sido más rápido, pero menos formativo.
 
-En resumen, **no uso IA cuando quiero consolidar un concepto fundamental** o cuando el ejercicio valora específicamente mi capacidad de análisis y creatividad. La IA es una herramienta, no un sustituto del pensamiento crítico.
+En resumen, **no uso IA cuando quiero consolidar un concepto fundamental** o cuando el ejercicio valora específicamente mi capacidad de análisis y creatividad. La IA es una herramienta, no un sustituto del pensamiento crítico..
 
 ---
