@@ -4,14 +4,17 @@
 **Auditor:** Angel Echenique
 
 ## Resumen
-Se ha analizado el archivo `stockguard.py` (código heredado). Se identificaron **tres vulnerabilidades críticas** que afectan a la integridad de los datos, la robustez del sistema y la mantenibilidad del proyecto.
+Se ha analizado el archivo `stockguard.py` (código heredado). 
+Se identificaron **tres vulnerabilidades críticas** que afectan a la integridad de los datos, la robustez del sistema y la mantenibilidad del proyecto.
 
 ---
 
 ## Vulnerabilidad 1: Ausencia de validación de entrada (qty y price negativos)
 
 ### Descripción
-Las funciones `add_item(name, qty, price)` y `update_price(name, new_price)` no realizan ninguna comprobación sobre los valores de cantidad y precio. Se permite almacenar:
+Las funciones `add_item(name, qty, price)` y `update_price(name, new_price)` no realizan ninguna comprobación sobre los valores de cantidad y precio. 
+
+Se permite almacenar:
 - Cantidades negativas (ej. `-10` unidades)
 - Precios negativos o cero (ej. `0€`, `-5€`)
 
@@ -71,6 +74,3 @@ Las tres vulnerabilidades son críticas y deben corregirse en el orden propuesto
 La corrección completa se realizará en las siguientes fases del ejercicio, respetando el plan de 12 commits que mando Rusgar.
 
 
-![alt text](<Captura de pantalla 2026-04-07 135546.png>)
-![alt text](<Captura de pantalla 2026-04-07 135601.png>)
-![alt text](<Captura de pantalla 2026-04-07 141227.png>)

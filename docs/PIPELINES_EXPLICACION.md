@@ -6,15 +6,15 @@ Este proyecto cuenta con **3 pipelines automatizados** en GitHub Actions que tra
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    GITHUB ACTIONS                              │
-├─────────────────┬─────────────────┬───────────────────────────┤
-│      CI         │    SECURITY     │     SONARCLOUD           │
-│  (ci.yml)       │ (security.yml)  │    (integrado en CI)     │
-├─────────────────┼─────────────────┼───────────────────────────┤
-│ • flake8        │ • Bandit        │ • Análisis estático      │
-│ • pytest        │ • Escaneo       │ • Métricas de calidad    │
-│ • coverage      │   de seguridad │ • Debt técnico           │
-└─────────────────┴─────────────────┴───────────────────────────┘
+│                    GITHUB ACTIONS                               │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│      CI         │    SECURITY     │     SONARCLOUD              │
+│  (ci.yml)       │ (security.yml)  │    (integrado en CI)        │
+├─────────────────┼─────────────────┼─────────────────────────────┤
+│ • flake8        │ • Bandit        │ • Análisis estático         │
+│ • pytest        │ • Escaneo       │ • Métricas de calidad       │
+│ • coverage      │   de seguridad  │ • Debt técnico              │
+└─────────────────┴─────────────────┴─────────────────────────────┘
 ```
 
 ---
@@ -174,18 +174,6 @@ git push origin main
 2. Importa tu repositorio `StockGuard`
 3. Genera un token en **My Account → Security**
 4. Añádelo en GitHub: **Settings → Secrets → SONAR_TOKEN**
-
----
-
-## Badges disponibles
-
-En el README.md tienes badges que muestran el estado:
-
-```markdown
-[![StockGuard CI](https://github.com/TU-USUARIO/StockGuard/actions/workflows/ci.yml/badge.svg)](URL)
-[![Security Audit](https://github.com/TU-USUARIO/StockGuard/actions/workflows/security.yml/badge.svg)(URL)
-[![Coverage](https://codecov.io/github/TU-USUARIO/StockGuard/coverage.svg?branch=main)](URL)
-```
 
 ---
 

@@ -63,8 +63,7 @@ StockGuard/
 │   └── test_stockguard.py
 │
 └── docs/
-    ├── AUDIT.md
-    ├── DOCUMENTACION_PROYECTO.md
+    ├── Auditoria.md
     ├── Resolucion_del_Bloque8.md
     ├── PIPELINES_EXPLICACION.md
     └── Inf_Completo-Desarrollo.md
@@ -260,15 +259,15 @@ Este proyecto implementa **3 pipelines automatizados** que trabajan juntos:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    GITHUB ACTIONS                              │
-├─────────────────┬─────────────────┬───────────────────────────┤
-│      CI         │    SECURITY     │     SONARCLOUD           │
-│  (ci.yml)       │ (security.yml)  │    (integrado en CI)     │
-├─────────────────┼─────────────────┼───────────────────────────┤
-│ • flake8        │ • Bandit        │ • Análisis estático      │
-│ • pytest        │ • Escaneo       │ • Métricas de calidad    │
-│ • coverage      │   de seguridad │ • Debt técnico           │
-└─────────────────┴─────────────────┴───────────────────────────┘
+│                    GITHUB ACTIONS                               │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│      CI         │    SECURITY     │     SONARCLOUD              │
+│  (ci.yml)       │ (security.yml)  │    (integrado en CI)        │
+├─────────────────┼─────────────────┼─────────────────────────────┤
+│ • flake8        │ • Bandit        │ • Análisis estático         │
+│ • pytest        │ • Escaneo       │ • Métricas de calidad       │
+│ • coverage      │   de seguridad  │ • Debt técnico              │
+└─────────────────┴─────────────────┴─────────────────────────────┘
 ```
 
 #### Pipeline 1: CI (Continuous Integration)
@@ -445,14 +444,6 @@ El análisis de SonarCloud está integrado en el pipeline CI (`.github/workflows
     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 ```
 
-### Badges
-
-En el README.md se muestran los badges:
-
-```markdown
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=kindred-98_StockGuard&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kindred-98_StockGuard)
-```
-
 ### Beneficios de usar SonarCloud
 
 1. **Detección temprana**: Encuentra bugs antes de que lleguen a producción
@@ -486,43 +477,3 @@ El ejercicio ha permitido practicar todos los conceptos de calidad de software:
 - **Documentación**: Docstrings y READMEs.
 
 La IA se utilizó como asistente para generar esqueletos y detectar vulnerabilidades, pero todo el código fue comprendido y ajustado manualmente. El pipeline CI garantiza que cualquier cambio futuro no rompa la funcionalidad existente.
-
-### 8.1 — Inventario de uso de IA
-
-| Archivo | Prompt principal | Cambios realizados |
-|---------|------------------|-------------------|
-| validator.py | "Genera validate_qty y validate_price con docstrings Google" | Ajustados mensajes de error y ejemplos. |
-| storage.py | "Crea funciones load/save con manejo de JSON corrupto" | Añadido `ensure_ascii=False` y encoding utf-8. |
-| test_storage.py | "Test que simule JSONDecodeError con mock" | Eliminados imports duplicados. |
-| ci.yml | "Pipeline con flake8 y pytest" | Añadido coverage reporting. |
-| sonar-project.properties | "Genera configuración para SonarCloud" | Ajustado projectKey y organization. |
-| PIPELINES_EXPLICACION.md | "Documentación de pipelines" | Estructurado con diagramas y tablas. |
-
-### 8.2 — Análisis de la vulnerabilidad
-
-**¿Qué riesgo real tendría permitir qty o price negativos en producción?**
-
-- Stock negativo no tiene sentido físico y rompe la lógica de negocio.
-- `get_total_value()` multiplicaría cantidad negativa por precio, dando valores incorrectos.
-- Un usuario podría introducir precios negativos para manipular informes financieros.
-
-**¿Cómo se mitigó?**
-
-- Validación en `Item.__post_init__()` con ValueError.
-- Funciones `validate_qty()` y `validate_price()` en `validator.py`.
-- Tests que verifican que se lanzan excepciones.
-
-### 8.3 — Reflexión sobre el pipeline CI
-
-**¿Por qué es útil ejecutar los tests automáticamente en cada push?**
-
-En este ejercicio, el pipeline permitió detectar errores de linting antes de hacer merge. Si no hubiera pipeline, los errores solo se verían localmente y podrían pasar desapercibidos en equipo.
-
-### 8.4 — ¿Cuándo NO usar IA?
-
-Decidí no usar IA cuando:
-- Corregí errores de linting (líneas en blanco, imports no usados).
-- Añadí edge cases propios a los tests.
-- Arreglé la estructura de carpetas.
-
-Lo hice para asegurarme que entendía cada detalle del código y evitar dependencia excesiva de la IA.

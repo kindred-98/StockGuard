@@ -249,10 +249,9 @@ El proyecto está configurado para análisis con SonarCloud. Para activar:
 | Documento | Descripción |
 |-----------|-------------|
 | [README](README.md) | Guía de uso rápido |
-| [AUDIT.md](docs/AUDIT.md) | Auditoría de vulnerabilidades |
+| [Auditoria.md](docs/Auditoria.md) | Auditoría de vulnerabilidades |
 | [PIPELINES_EXPLICACION.md](docs/PIPELINES_EXPLICACION.md) | Detalle de pipelines |
 | [Inf_Completo-Desarrollo.md](docs/Inf_Completo-Desarrollo.md) | Informe completo de desarrollo |
-| [DOCUMENTACION_PROYECTO.md](docs/DOCUMENTACION_PROYECTO.md) | Documentación del proyecto |
 
 ---
 
@@ -279,7 +278,7 @@ Este proyecto es de carácter académico, pero las contribuciones son bienvenida
 
 ## 📝 Reflection del Autor
 
-> *Después de más de dos décadas en QA, he aprendido que la diferencia entre un código "que funciona" y código de "calidad profesional" está en la disciplina. Este proyecto demuestra que incluso un ejercicio académico puede convertirse en un caso de estudio de excellence en ingeniería de software.*
+> *Después dos dias como QA, he aprendido que la diferencia entre un código "que funciona" y código de "calidad profesional" está en la disciplina. Este proyecto demuestra que incluso un ejercicio académico puede convertirse en un caso de estudio de excellence en ingeniería de software.*
 >
 > *Las lecciones clave:*
 > - *La validación nunca es excesiva*

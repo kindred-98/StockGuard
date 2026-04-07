@@ -33,7 +33,7 @@ def test_item_qty_zero_raises_value_error():
 
 
 def test_item_qty_negative_raises_value_error():
-    """qty negativo debe lanzar ValueError."""
+    """Qty negativo debe lanzar ValueError."""
     with pytest.raises(ValueError, match="La cantidad debe ser positiva"):
         Item(name="Teclado", qty=-5, price=25.0)
 
@@ -45,7 +45,7 @@ def test_item_price_zero_raises_value_error():
 
 
 def test_item_price_negative_raises_value_error():
-    """price negativo debe lanzar ValueError."""
+    """Price negativo debe lanzar ValueError."""
     with pytest.raises(ValueError, match="El precio debe ser positivo"):
         Item(name="Tablet", qty=3, price=-10.5)
 
