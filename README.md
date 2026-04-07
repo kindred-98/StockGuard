@@ -276,7 +276,7 @@ Este proyecto es de carácter académico, pero las contribuciones son bienvenida
 
 ---
 
-## 📝 Reflection del Autor
+## 📝 Reflection A.D.E.V
 
 > *Después dos dias como QA, he aprendido que la diferencia entre un código "que funciona" y código de "calidad profesional" está en la disciplina. Este proyecto demuestra que incluso un ejercicio académico puede convertirse en un caso de estudio de excellence en ingeniería de software.*
 >
