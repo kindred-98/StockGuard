@@ -34,12 +34,5 @@ jobs:
 
     - name: SonarCloud Scan
       uses: SonarSource/sonarqube-scan-action@v5.0.0
-      with:
-        sonarArgs: >
-          -Dsonar.projectKey=kindred-98_StockGuard
-          -Dsonar.organization=kindred-98
-          -Dsonar.sources=stockguard
-          -Dsonar.tests=tests
-          -Dsonar.python.version=3.12
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
