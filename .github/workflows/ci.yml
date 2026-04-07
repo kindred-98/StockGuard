@@ -30,9 +30,14 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        pytest tests/ -v --tb=short --cov=stockguard --cov-report=xml
+        pytest tests/ -v --tb=short --cov=stockguard --cov-report=xml --cov-report=term-missing
 
     - name: SonarCloud Scan
       uses: SonarSource/sonarqube-scan-action@v5.0.0
+      with:
+        args: >
+          -Dsonar.python.coverage.reportPaths=coverage.xml
+          -Dsonar.sources=stockguard
+          -Dsonar.tests=tests
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
