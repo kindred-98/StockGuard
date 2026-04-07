@@ -33,8 +33,6 @@ jobs:
         pytest tests/ -v --tb=short --cov=stockguard --cov-report=xml
 
     - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
-      with:
-        projectBaseDir: .
+      uses: SonarSource/sonarqube-scan-action@v5.0.0
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
