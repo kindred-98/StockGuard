@@ -75,6 +75,7 @@ El código original presentaba las siguientes vulnerabilidades críticas:
 | 2 | JSON corrupto | Crasheo del sistema | Manejo de excepciones en `storage.py` |
 | 3 | Sin tests | Imposible verificar funcionamiento | 34 tests unitarios con mocks |
 | 4 | Sin documentación | Mantenimiento imposible | Docstrings Google + README |
+| 5 | Dependencias vulnerables en librerías de terceros | Riesgo de ejecución o escalada por paquetes externos | `requirements.txt` actualizado y documentación en `docs/SNYK_Vulnerabilidades.md` |
 
 ---
 
