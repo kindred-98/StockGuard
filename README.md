@@ -58,12 +58,12 @@ StockGuard/
 
 ### Pilares de Calidad implementados
 
-1. **Validación de Datos**: Sistema robusto de validación en múltiples capas
-2. **Manejo de Errores**: Tolerancia a fallos en operaciones de E/S
-3. **Test Coverage**: Cobertura casi total del código de negocio
-4. **Documentación**: Docstrings en formato Google en todas las funciones públicas
-5. **Seguridad**: Validación de entradas para prevenir inyección de datos maliciosos
-6. **Integración Continua**: 3 pipelines automatizados trabajando en synergy
+1. **Validación de Datos**: Sistema robusto de validación en múltiples capas.
+2. **Manejo de Errores**: Tolerancia a fallos en operaciones de E/S.
+3. **Test Coverage**: Cobertura casi total del código de negocio.
+4. **Documentación**: Docstrings en formato Google en todas las funciones públicas.
+5. **Seguridad**: Validación de entradas para prevenir inyección de datos maliciosos.
+6. **Integración Continua**: 3 pipelines automatizados trabajando en synergy.
 
 ### Vulnerabilidades Corregidas
 
